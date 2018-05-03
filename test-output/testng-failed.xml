@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" guice-stage="DEVELOPMENT" verbose="10" name="Failed suite [TSDS - ECDS]" allow-return-values="true">
+  <test name="ECDS Regression Testing - ECD1_104_001">
+    <classes>
+      <class name="tea.ivv.tsds.ecds.TSDSEcdsEndToEndIntegrationIT">
+        <methods>
+          <include name="testLogin">
+            <parameter name="loginId" value="TSDSRegression.ECDSApprover"/>
+            <parameter name="pwd" value="VGVzdCEyMzQ1JA=="/>
+          </include> <!-- testLogin -->
+          <include name="launchTSDSPortal"/>
+          <include name="testSelectOrgID">
+            <parameter name="orgId" value="247906"/>
+          </include> <!-- testSelectOrgID -->
+          <include name="testLaunchCoreCollection"/>
+          <include name="testLaunchECDSApplicationHome"/>
+          <include name="testSetUpParams">
+            <parameter name="acadYr" value="2016-2017"/>
+            <parameter name="collectionId" value="KG"/>
+          </include> <!-- testSetUpParams -->
+          <include name="testLaunchPrepareFinalizeSubmission"/>
+          <include name="testRunPrepare"/>
+          <include name="testRunValidate"/>
+          <include name="testRunComplete"/>
+          <include name="testRunReset"/>
+          <include name="runReports">
+            <parameter name="reportNum" value="ECD0-000-001"/>
+            <parameter name="reportTitle" value="2017_KG"/>
+            <parameter name="orgId" value="247906"/>
+          </include> <!-- runReports -->
+          <include name="testExitCoreColletionPage"/>
+          <include name="testLogOut"/>
+        </methods>
+      </class> <!-- tea.ivv.tsds.ecds.TSDSEcdsEndToEndIntegrationIT -->
+    </classes>
+  </test> <!-- ECDS Regression Testing - ECD1_104_001 -->
+  <test name="ECDS Regression Testing - ECD1_104_001(failed)">
+    <classes>
+      <class name="tea.ivv.tsds.ecds.TSDSEcdsEndToEndIntegrationIT">
+        <methods>
+          <include name="testRunPrepare"/>
+          <include name="testLaunchECDSApplicationHome"/>
+          <include name="testSetUpParams"/>
+          <include name="launchTSDSPortal"/>
+          <include name="testRunValidate"/>
+          <include name="testLogin"/>
+          <include name="testRunReset"/>
+          <include name="testLaunchCoreCollection"/>
+          <include name="testRunComplete"/>
+          <include name="testSelectOrgID"/>
+          <include name="runReports"/>
+          <include name="setUp"/>
+          <include name="testLaunchPrepareFinalizeSubmission"/>
+          <include name="setupAfterSuite"/>
+        </methods>
+      </class> <!-- tea.ivv.tsds.ecds.TSDSEcdsEndToEndIntegrationIT -->
+    </classes>
+  </test> <!-- ECDS Regression Testing - ECD1_104_001(failed) -->
+</suite> <!-- Failed suite [TSDS - ECDS] -->

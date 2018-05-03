@@ -1,0 +1,43 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS Support Prod Patch">
+    <test name="UID Support Prod Patch Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSSupport.TSDSSupportTest">
+        <methods>
+		  <include name="loginTEAL">
+		  	<parameter name ="loginId" value="IVVAutoProd.Test"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVhbCEzNDU2Nyo="/>
+          </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+          	 <parameter name ="org" value ="000000"/>
+          </include>
+          <include name="launchsupport" />
+          <include name="searchKnowledgebase">
+          	<parameter name="searchstring" value="error" />
+          	<parameter name="resultlink" value="Unique ID: Alternate ID" />
+          </include>
+        </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="Level One Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSSupport.TSDSSupportTest">
+        <methods>
+		  <include name="loginTEAL">
+				<parameter name ="loginId" value="IVVAutoPEIMSProd.Test"/>   <!--ECDSApprover role -->
+				<parameter name ="pwd" value="VGVhbCEzNDU2Nyo="/>
+             </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+          	 <parameter name ="org" value ="701603"/>
+          </include>
+          <include name="launchsupport" />
+          <include name="accessTIMS" />
+          <include name="verifyTIMSDatabase" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

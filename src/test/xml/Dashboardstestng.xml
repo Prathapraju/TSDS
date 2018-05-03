@@ -1,0 +1,30 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS - Dashboards">
+  <test name="Dashboards Prod Patch Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSDashboards.StudentGPSDashboardsTests">
+        <methods>
+          <include name="loginTEAL" >
+              <parameter name ="loginId" value="IVVAutoDashboardProd.Test"/>   
+              <parameter name ="pwd" value="VHNkcyEyMzQ1NiQ="/>
+          </include>
+          <include name="accessTSDS"/>
+          <include name="selectOrg">
+              <parameter name="orgId" value="701603"/>
+          </include>
+		  <include name="accessDashboardsHome" />
+          <include name="accessDashboards">
+          	  <parameter name="privledge" value ="Dashboard Config" />
+          </include>
+          <include name="runGPSDashboards">
+              <parameter name="lea" value="LEARNING ISD"/>  
+          	  <parameter name="orgId" value = "701603" />
+          </include>
+          <include name="runDashboardReport">
+          	  <parameter name="reportname" value ="GPS1-101-001" />
+          </include>   
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,57 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS - ECDS" verbose="10" allow-return-values="true" configfailurepolicy="continue">
+  <test name="ECDS Regression Testing - ECD1_104_001" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.ecds.TSDSEcdsEndToEndIntegrationIT">
+        <methods>
+          <include name="testLogin" >
+              <parameter name ="loginId" value="TSDSRegression.ECDSApprover"/>   
+              <parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+          </include>
+          <include name="launchTSDSPortal" />
+          <include name="testSelectOrgID" >
+              <parameter name="orgId" value="247906"/>           
+          </include>
+          <include name="testLaunchCoreCollection"/>
+          <include name="testLaunchECDSApplicationHome"/>
+          <include name="testSetUpParams">
+             <parameter name="acadYr" value="2016-2017"/>
+             <parameter name="collectionId" value="KG"/>
+          </include> 
+          <include name="testLaunchPrepareFinalizeSubmission"/> 
+          <include name="testRunPrepare" />
+          <include name="testRunValidate"/>
+          <include name="testRunComplete"/>
+          <include name="testRunReset"/>
+          <include name="runReports">
+		   	<parameter name="orgId" value="247906"/>
+		   	<parameter name="reportNum" value ="ECD0-000-001"/>
+		   	<parameter name="reportTitle" value ="2017_KG"/>
+		  </include>
+         <!--
+          <include name="testLaunchViewReports"/>
+          <include name="testRunViewReports" >
+              <parameter name="rptType" value="ECD1_104_001"/>
+          </include>
+          <include name="testGenerateReports">
+              <parameter name="rptType" value="ECD1_104_001"/>
+              <parameter name="orgType" value="By Campus"/>
+              <parameter name="campusIds" value="227904117,227904118"/>
+              <parameter name="sSn" value="Full SSN/Alt ID"/>
+              <parameter name="ecdsRptType" value=""/>
+          </include>
+          <include name="testDownloadReport">
+              <parameter name="rptType" value="ECD1_104_001"/>
+              <parameter name="trgFile" value="ByCampus_ECD1_104_001.pdf"/>
+              <parameter name="refFile" value="ByCampus_ECD1_104_001.pdf"/>
+          </include>
+                  -->
+          <include name="testExitCoreColletionPage"/>
+          <include name="testLogOut"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+  
+  
+</suite>

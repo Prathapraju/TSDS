@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS Prod Patch Test">
+    <suite-files>
+		<suite-file path="ProdPatchTSDSUniqueIDtestng.xml"/>
+        <suite-file path="ProdPatchTSDSUtilitiestestng.xml"/>
+        <suite-file path="ProdPatchTSDSODStestng.xml"/>
+		<suite-file path="ProdPatchPEIMSLEAtestng.xml"/>
+		<suite-file path="ProdPatchTSDSSupporttestng.xml"/>
+		<!--suite-file path="ProdPatchDashboardstestng.xml"/-->
+		<suite-file path="ProdPatchECDStestng.xml"/>
+    </suite-files>
+</suite>

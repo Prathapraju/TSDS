@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS ODS">
+	<test name="ODS Regression Testing" preserve-order="true" >
+		<classes>
+		<class name="tea.ivv.tsds.TSDSODS.TSDSODSTests">
+			<methods>
+				<include name="loginTEAL">
+					<parameter name ="loginId" value="TSDSRegression.ODS"/>   <!--ECDSApprover role -->
+					<parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+				</include>
+				<include name="accessTSDS" />
+				<include name="selectOrg">
+					<parameter name ="org" value="133905"/>
+				</include>
+				<include name="launchODS" />
+				<include name= "deletePEIMSData" />
+				<include name= "loadODSData" >
+					<parameter name ="collection" value="2018 SUMR1"/>
+				</include>
+				<include name= "verifyDTU" />
+			</methods>
+		</class>
+		</classes>
+	</test>
+</suite>

@@ -1,0 +1,27 @@
+ASSIGN
+Enter Online
+Upload FileEnter OnlineUpload FileDOWNLOAD
+Batch
+LocationBatchLocationSEARCH
+Batch
+PersonBatchPersonENROLLMENT EVENT
+Dashboard
+Upload FileDashboardUpload FileMANAGE SYSTEM
+Batch Manager
+Review All Batches
+Rule Manager
+Schedule Manager
+Security Manager
+Sync Manager
+System Properties
+View System SummaryBatch ManagerReview All BatchesRule ManagerSchedule ManagerSecurity ManagerSync ManagerSystem PropertiesView System SummaryMANAGE IDs
+Duplicate Queue
+Retire An ID
+Review Duplicate ID
+Review Shared ID
+Separate Shared IDsDuplicate QueueRetire An IDReview Duplicate IDReview Shared IDSeparate Shared IDsMORE
+Change LEA
+Current Users
+List Downloads
+Reports
+Search Input RecordChange LEACurrent UsersList DownloadsReportsSearch Input Record

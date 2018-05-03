@@ -1,0 +1,38 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="PEIMS Campus">
+    <test name="PEIMS Campus Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSPEIMS.TSDSPEIMSTests">
+        <methods>
+		  <include name="loginTEAL">
+			<parameter name ="loginId" value="TSDSRegression.PEIMSCampus"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+          </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+			<parameter name = "org" value = "133905101"/>
+		  </include>
+		  <include name="launchPEIMS" />
+		  <include name="setCollection">
+		  	<parameter name="acadYr" value = "2017-2018"/>
+		  	<parameter name="collectionId" value="SUMR"/>
+		  	<parameter name="submissionId" value="First"/>
+		  </include>
+		  <include name="promoteCampusLoadedData" />
+		   <include name="validateData" />
+		   <include name="checkCampusPrepareStatus" />
+		   <include name="runReports">
+		   	<parameter name="org" value="133905101"/>
+		   	<parameter name="reportNum" value ="PDM1-120-001"/>
+		   	<parameter name="reportTitle" value ="StudentsbySex,Ethnicity,"/>
+		   </include>
+		   <include name="searchSubmissionData">
+		   	<parameter name="cat" value ="Student" />
+		   	<parameter name="subcat" value ="Student Basic Information" />
+		   	<parameter name="name" value ="TAYLOR" />
+		   </include>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS BOBI Test">
+    <suite-files>
+		<suite-file path="ProdPatchPEIMSReportstestng.xml"/>
+		<suite-file path="ProdPatchDashboardReportstestng.xml"/>
+		<suite-file path="ProdPatchECDSReportstestng.xml"/>
+    </suite-files>
+</suite>

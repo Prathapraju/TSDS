@@ -1,0 +1,89 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS Support Regression">
+    <test name="UID Support Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSPortal.TSDSTest">
+        <methods>
+		  <include name="loginTEAL">
+		  	<parameter name ="loginId" value="TSDSRegression.UIDDistrictMany"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+          </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+          	 <parameter name ="org" value ="226906"/>
+          </include>
+          <include name="launchsupport" />
+          <include name="clickCreateIncident" />
+          <include name="submitIncident" />
+          <include name="viewIncident" />
+          <include name="searchKnowledgebase">
+          	<parameter name="searchstring" value="error" />
+          	<parameter name="resultlink" value="Unique ID: Middle name or middle initial" />
+          </include>
+        </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="Level One Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSPortal.TSDSTest">
+        <methods>
+		  <include name="loginTEAL">
+			<parameter name ="loginId" value="TSDSRegression.LevelOne"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+             </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+          	 <parameter name ="org" value ="221901"/>
+          </include>
+          <include name="launchsupport" />
+          <include name="accessTIMS" />
+          <include name="verifyTIMSAccess" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+   <test name="ODS Support Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSPortal.TSDSTest">
+        <methods>
+		  <include name="loginTEAL">           
+			<parameter name ="loginId" value="TSDSRegression.ods"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+          </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+          	 <parameter name ="org" value ="003906"/>
+          </include>
+          <include name="launchsupport" />
+          <include name="clickCreateIncident" />
+          <include name="verifyIncidentLoaded" />
+          <include name="verifyMyIncidents" />
+          <include name="searchKnowledgebase">
+          	<parameter name="searchstring" value="error" />
+          	<parameter name="resultlink" value="Unique ID: Middle name or middle initial" />
+          </include>
+        </methods>
+      </class>
+    </classes>
+  </test>
+  <test name="Level 3 Support Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSPortal.TSDSTest">
+        <methods>
+		  <include name="loginTEAL">           
+			<parameter name ="loginId" value="TSDSRegression.LevelThree"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+		  </include>
+		  <include name="accessTSDS" />
+          <include name="selectOrg">
+            <parameter name ="org" value ="000000"/>
+          </include>
+          <include name="launchsupport" />
+          <include name="accessTIMS" />
+          <include name="searchforTIMSIssue" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

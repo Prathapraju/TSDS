@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MainSuite">
+    <suite-files>
+        <suite-file path="ECDStestng.xml"/>
+        <!--suite-file path="ECDSReports_ECD1_102_001.xml"/-->
+        <!--suite-file path="ECDSReports_ECD1_104_001.xml"/-->
+        <!--suite-file path="ECDStestng.xml"/-->
+        <!--suite-file path="ECDSRules.xml"/-->
+    </suite-files>
+</suite>

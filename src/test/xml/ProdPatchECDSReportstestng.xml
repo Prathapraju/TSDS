@@ -1,0 +1,35 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS - ECDS" verbose="10">
+  <test name="ECDS BOBI Report Testing" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.ecds.TSDSEcdsEndToEndIntegrationIT">
+        <methods>
+          <include name="testLogin" >
+              <parameter name ="loginId" value="IVVAutoTSDSProd.Test"/>   
+              <parameter name ="pwd" value="VHNkcyE0NTY3OCo="/>
+          </include>
+          <include name="launchTSDSPortal" />
+          <include name="testSelectOrgID" >
+              <parameter name="orgId" value="701603"/>           
+          </include>
+          <include name="testLaunchCoreCollection"/>
+          <include name="testLaunchECDSApplicationHome"/>
+          <include name="testSetUpParams">
+             <parameter name="acadYr" value="2017-2018"/>
+             <parameter name="collectionId" value="KG"/>
+          </include> 
+          <include name="testLaunchPrepareFinalizeSubmission"/> 
+          <include name="runReports">
+		   	<parameter name="orgId" value="701603"/>
+		   	<parameter name="reportNum" value ="ECD0-000-001"/>
+		   	<parameter name="reportTitle" value ="2018_KG"/>
+		  </include>
+          <include name="testExitCoreColletionPage"/>
+          <include name="testLogOut"/>		  
+        </methods>
+      </class>
+    </classes>
+  </test>
+  
+  
+</suite>

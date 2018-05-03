@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MainSuite">
+    <test name="Utilities Regression Testing" preserve-order="true" >
+    <classes>
+      <class name="TSDSPortal.TSDSTest">
+        <methods>
+		  <include name="runGPSDashboardsProdSmokeTest">
+			<parameter name ="loginId" value="Deborah.Largent"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVzdGVyMzQ1JQ=="/>
+			<parameter name = "orgId" value = "061902"/>
+			<parameter name = "lea" value = "LEWISVILLE ISD" />
+		  </include>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Unique ID">
+    <test name="Unique ID Regression Testing" group-by-instances="true" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSUniqueID.TSDSUniqueIDTest">
+        <methods>
+			<include name="loginTEAL">
+				<parameter name ="pwd" value="VGVzdCEyMzQ1JA=="/>
+			</include>
+			<include name="accessTSDS" />
+			<include name="selectOrg" />
+			<include name="launchUniqueID"/>
+			<include name="VerifyAccess" />
+			<include name="verifyUIDPersonSearch" />
+			<include name="verifyUIDReports" />
+			<include name="verifySupport" />
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

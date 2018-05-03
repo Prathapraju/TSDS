@@ -1,0 +1,39 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TSDS - PEIMS">
+    <test name="TSDS PEIMS LEA Prod Patch Test" preserve-order="true" >
+    <classes>
+      <class name="tea.ivv.tsds.TSDSPEIMS.TSDSPEIMSTests">
+        <methods>
+		  <include name="loginTEAL">
+			<parameter name ="loginId" value="IVVAutoPEIMSProd.Test"/>   <!--ECDSApprover role -->
+            <parameter name ="pwd" value="VGVhbCEzNDU2Nyo="/>
+          </include>
+          <include name="accessTSDS" />
+          <include name="selectOrg">
+			<parameter name = "org" value = "701603"/>
+		  </include>
+		  <include name="launchPEIMS" />
+		  <include name="setCollection">
+		  	<parameter name="acadYr" value = "2017-2018"/>
+		  	<parameter name="collectionId" value="SUMR"/>
+		  	<parameter name="submissionId" value="First"/>
+		  </include>
+		  <include name="promoteSpecificCatSubCat">
+			<parameter name="cat" value ="Education Organization"/>
+			<parameter name="subcat" value ="Local Education Agency"/>
+		   </include>
+		   <include name="validateSpecificCatSubCatData">
+		   		<parameter name="cat" value ="Education Organization"/>
+				<parameter name="subcat" value ="Local Education Agency"/>
+		   </include>
+		   <include name="checkLEAPrepareStatus" />
+		   <include name="runReports">
+		   	<parameter name="org" value="701603"/>
+		   	<parameter name="reportNum" value ="PDM3-130-001"/>
+		   	<parameter name="reportTitle" value ="Superintendent sReportofStudent"/>
+		   </include>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

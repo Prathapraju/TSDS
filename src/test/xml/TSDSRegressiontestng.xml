@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MainSuite">
+    <suite-files>
+        <suite-file path="ECDStestng.xml"/>
+        <suite-file path="TSDSODStestng.xml"/>
+        <suite-file path="TSDSPEIMStestng.xml"/>
+        <suite-file path="TSDSSupporttestng.xml"/>
+        <suite-file path="TSDSUniqueIDTestng.xml"/>
+        <suite-file path="TSDSUtilitiestestng.xml"/>
+    </suite-files>
+</suite>

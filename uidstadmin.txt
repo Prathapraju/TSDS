@@ -1,0 +1,19 @@
+ASSIGN
+Enter Online
+Upload FileEnter OnlineUpload FileDOWNLOAD
+Batch
+LocationBatchLocationSEARCH
+PersonPersonMANAGE SYSTEM
+Batch Manager
+Review All Batches
+View System SummaryBatch ManagerReview All BatchesView System SummaryMANAGE IDs
+Duplicate Queue
+Retire An ID
+Review Duplicate ID
+Review Shared ID
+Separate Shared IDsDuplicate QueueRetire An IDReview Duplicate IDReview Shared IDSeparate Shared IDsMORE
+Change LEA
+Current Users
+List Downloads
+Reports
+Search Input RecordChange LEACurrent UsersList DownloadsReportsSearch Input Record
